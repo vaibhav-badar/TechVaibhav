@@ -178,7 +178,7 @@ export class EmpUpdateComponent {
 
           // if (this.item && this.item.dob) {
           //   this.empDate = this.item.dob; // Assign the DOB to empDate
-          // }git
+          // }
           //this.employeeService.setSelectedEmployee(this.employee);
           // this.router.navigateByUrl('/emp-update')
           // this.form-group.patchValue({
