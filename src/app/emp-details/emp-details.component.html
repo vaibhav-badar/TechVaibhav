@@ -1,0 +1,151 @@
+<div class="first" *ngIf="isFirst">
+    <div class="form_title"><h1><b>{{ title }}</b></h1></div>
+    <div class="s_main">
+    <input id="s_one" type="text" placeholder="Search..." [(ngModel)]="searchQuery"/>
+    </div>
+    <!-- {{searchQuery}} -->
+    <!-- <br>
+    <label >From Date</label>
+    <input class="form-control" type="text" placeholder="From Date" [(ngModel)]="searchDate"/> -->
+    <!-- <br>
+    <label >To Date</label>
+    <input class="form-control" type="text" placeholder="To Date" [(ngModel)]="searchQuery"/> -->
+    <div>
+    <table class="second">
+      <thead class="third">
+        <tr>
+          <th (click)="sort('employeE_ID')">Employee ID&nbsp;<span *ngIf="sortField === 'employeE_ID'">
+            <svg *ngIf='ascending' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3.646 11.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 1 1-.708.708L8 8.707l-3.646 3.647a.5.5 0 0 1-.708 0zM3.646 7.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 1 1-.708.708L8 4.707l-3.646 3.647a.5.5 0 0 1-.708 0z"/>
+            </svg>
+            <svg *ngif='!ascending' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3.646 4.146a.5.5 0 0 1 .708 0L8 7.793l3.646-3.647a.5.5 0 1 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zM3.646 8.146a.5.5 0 0 1 .708 0L8 11.793l3.646-3.647a.5.5 0 1 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </span></th>
+          <th (click)="sort('employeE_NUMBER')">Employee Number&nbsp;<span *ngIf="sortField === 'employeE_NUMBER'">
+            <svg *ngIf='ascending' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3.646 11.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 1 1-.708.708L8 8.707l-3.646 3.647a.5.5 0 0 1-.708 0zM3.646 7.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 1 1-.708.708L8 4.707l-3.646 3.647a.5.5 0 0 1-.708 0z"/>
+            </svg>
+            <svg *ngif='!ascending' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3.646 4.146a.5.5 0 0 1 .708 0L8 7.793l3.646-3.647a.5.5 0 1 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zM3.646 8.146a.5.5 0 0 1 .708 0L8 11.793l3.646-3.647a.5.5 0 1 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </span></th>
+          <th (click)="sort('officiaL_EMAIL ')">Employee Email&nbsp;<span *ngIf="sortField === 'officiaL_EMAIL'">
+            <svg *ngIf='ascending' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3.646 11.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 1 1-.708.708L8 8.707l-3.646 3.647a.5.5 0 0 1-.708 0zM3.646 7.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 1 1-.708.708L8 4.707l-3.646 3.647a.5.5 0 0 1-.708 0z"/>
+            </svg>
+            <svg *ngif='!ascending' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3.646 4.146a.5.5 0 0 1 .708 0L8 7.793l3.646-3.647a.5.5 0 1 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zM3.646 8.146a.5.5 0 0 1 .708 0L8 11.793l3.646-3.647a.5.5 0 1 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </span></th>
+          <th (click)="sort('firsT_NAME ')">Employee FirstName&nbsp;<span *ngIf="sortField === 'firsT_NAME'">
+            <svg *ngIf='ascending' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3.646 11.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 1 1-.708.708L8 8.707l-3.646 3.647a.5.5 0 0 1-.708 0zM3.646 7.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 1 1-.708.708L8 4.707l-3.646 3.647a.5.5 0 0 1-.708 0z"/>
+            </svg>
+            <svg *ngif='!ascending' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3.646 4.146a.5.5 0 0 1 .708 0L8 7.793l3.646-3.647a.5.5 0 1 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zM3.646 8.146a.5.5 0 0 1 .708 0L8 11.793l3.646-3.647a.5.5 0 1 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </span></th>
+          <th>Employee MiddleName</th>
+          <th>Employee LastName</th>
+          <th>Employee Gender</th>
+          <!-- <th>Employee Marital Status</th> -->
+          <!-- <th>Employee Pan Number</th> -->
+          <th>Employee DOB</th>
+          <th>Action</th>
+  
+          <!-- <th><button></button></th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees | search : searchQuery | sort : sortField : ascending">
+          <td>{{ employee.employeE_ID}}</td>
+          <td>{{ employee.employeE_NUMBER }}</td>
+          <td>{{ employee.officiaL_EMAIL }}</td>
+          <td>{{employee.firsT_NAME}}</td>
+          <td>{{employee.middlE_NAME}}</td>
+          <td>{{employee.lasT_NAME}}</td>
+          <td>{{ employee.gender }}</td>
+          <!-- <td>{{ employee.maritaL_STATUS }}</td> -->
+          <!-- <td>{{ employee.paN_NO }}</td> -->
+          <!-- <td>{{ employee.personaL_EMAIL }}</td> -->
+          <td>{{ employee.dob | customDate:'yyyy/MM/dd' }}</td> <!--  date:'d LLLL y' -->
+          <td><button class="editbutton" (click)="getEmplyeebyId(employee.employeE_ID)"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"  viewBox="0 0 128 128">
+            <path d="M 79.335938 15.667969 C 78.064453 15.622266 76.775 15.762109 75.5 16.099609 C 72.1 16.999609 69.299609 19.199219 67.599609 22.199219 L 64 28.699219 C 63.2 30.099219 63.699609 32.000781 65.099609 32.800781 L 82.400391 42.800781 C 82.900391 43.100781 83.400391 43.199219 83.900391 43.199219 C 84.200391 43.199219 84.399219 43.199609 84.699219 43.099609 C 85.499219 42.899609 86.1 42.399219 86.5 41.699219 L 90.199219 35.199219 C 91.899219 32.199219 92.4 28.700781 91.5 25.300781 C 90.6 21.900781 88.400391 19.100391 85.400391 17.400391 C 83.525391 16.337891 81.455078 15.744141 79.335938 15.667969 z M 60.097656 38.126953 C 59.128906 38.201172 58.199219 38.724609 57.699219 39.599609 L 27.5 92 C 24.1 97.8 22.200781 104.30039 21.800781 110.90039 L 21 123.80078 C 20.9 124.90078 21.5 125.99961 22.5 126.59961 C 23 126.89961 23.5 127 24 127 C 24.6 127 25.199219 126.8 25.699219 126.5 L 36.5 119.40039 C 42 115.70039 46.7 110.8 50 105 L 80.300781 52.599609 C 81.100781 51.199609 80.599219 49.3 79.199219 48.5 C 77.799219 47.7 75.899609 48.199609 75.099609 49.599609 L 44.800781 102 C 41.900781 106.9 37.899609 111.20039 33.099609 114.40039 L 27.300781 118.19922 L 27.699219 111.30078 C 27.999219 105.60078 29.699609 100 32.599609 95 L 62.900391 42.599609 C 63.700391 41.199609 63.200781 39.3 61.800781 38.5 C 61.275781 38.2 60.678906 38.082422 60.097656 38.126953 z M 49 121 C 47.3 121 46 122.3 46 124 C 46 125.7 47.3 127 49 127 L 89 127 C 90.7 127 92 125.7 92 124 C 92 122.3 90.7 121 89 121 L 49 121 z M 104 121 A 3 3 0 0 0 101 124 A 3 3 0 0 0 104 127 A 3 3 0 0 0 107 124 A 3 3 0 0 0 104 121 z"></path>
+        </svg></button></td>
+         </tr> 
+      </tbody>
+    </table>
+    </div>
+</div>
+    <div *ngIf="!isFirst">
+        <emp-update-root [item]="id"></emp-update-root>
+  </div>
+<!-- 
+
+
+<th (click)="sort('employeE_ID')">Employee ID&nbsp;<span *ngIf="sortField === 'employeE_ID'">
+            <svg *ngIf='ascending' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3.646 11.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 1 1-.708.708L8 8.707l-3.646 3.647a.5.5 0 0 1-.708 0zM3.646 7.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 1 1-.708.708L8 4.707l-3.646 3.647a.5.5 0 0 1-.708 0z"/>
+            </svg>
+            <svg *ngif='!ascending' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3.646 4.146a.5.5 0 0 1 .708 0L8 7.793l3.646-3.647a.5.5 0 1 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zM3.646 8.146a.5.5 0 0 1 .708 0L8 11.793l3.646-3.647a.5.5 0 1 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </span></th>
+      <emp-details - emp-update></emp-details -  emp-update> -->
+
+    <!-- <table>
+    <tr>
+      <th>ID</th>
+      
+      <th>Name</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Action</th>
+    </tr> -->
+    <!-- <tr *ngFor="let product of productList">
+      <td>{{ product.productId}}</td>
+      <td>{{product.productName}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.productCategory}}</td>
+      <td><button (click)="onedit(product.productId,product.productName,product.price,product.productCategory)">Edit</button></td>
+    </table> -->
+  <!-- </div>
+  <label for="totalprice">Total Price</label>
+  <input type="number" id="totalprice" placeholder="Sum..." [(ngModel)]="sum">
+  </div>
+
+
+ <button (click)="getAcategory()">Get ABC Product</button>
+ <button (click)="getXcategory()">Get XYZ Product</button>
+ <table *ngIf="isABC">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let product of productListABC">
+    <td>{{ product.productId}}</td>
+    <td>{{product.productName}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.productCategory}}</td>
+    <td><button (click)="onedit(product.productId,product.productName,product.price,product.productCategory)">Edit</button></td>
+  </table>
+
+  <table *ngIf="isXYZ">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let product of productListXYZ">
+      <td>{{ product.productId}}</td>
+      <td>{{product.productName}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.productCategory}}</td>
+      <td><button (click)="onedit(product.productId,product.productName,product.price,product.productCategory)">Edit</button></td>
+    </table> -->

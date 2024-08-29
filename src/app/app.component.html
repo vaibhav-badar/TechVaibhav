@@ -1,0 +1,59 @@
+
+<!-- <ul>
+  <li><a href="#home">Home</a></li>
+  <button (click)="goToAddfieldPage()">Emp-Details</button>
+  <li><a href="#news">Update Employee</a></li>
+  <button (click)="goToUpdatefieldPage()">Add</button>
+  <li><a href="#contact">Edit Employee</a></li>
+</ul> -->
+
+
+<!-- <nav>
+<div class="navbar" id="myNavbar"> 
+  <button (click)="goToAddfieldPage()">Emp-Details</button>&nbsp;&nbsp;
+  <button (click)="goToUpdatefieldPage()">Add</button>
+</div> 
+</nav> -->
+
+
+<!-- <nav class="navbar">
+  <div class="container">
+      <a href="#" class="logo">MyLogo</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle">&#9776;</label>
+      <ul>
+          <li><a href="#" onclick="goToAddfieldPage()">Emp-Details</a></li>
+          <li><a href="#" onclick="goToUpdatefieldPage()">Add</a></li> -->
+          <!-- <li><button (click)="goToAddfieldPage()">Emp-Details</button></li>
+          <li><button (click)="goToUpdatefieldPage()">ADD</button></li>
+          <li><button (click)="goToEditfieldPage()">EDIT</button></li>
+          <li><button (click)="goToHomePage()">Back</button></li> -->
+      <!-- </ul>
+  </div>
+</nav> --> 
+<!-- 
+<a [routerLink]="['/emp-details']">Emp-Details</a>
+      <a [routerLink]="['/emp-update']">Emp-Update</a> -->
+<!-- 
+<header>
+	<nav class="links" >
+      <a [routerLink]="['/emp-details']" class="frow">Emp-Details</a>
+      <a [routerLink]="['/emp-update']">Emp-Update</a>
+		<a href="#">Link 3</a>
+		<a href="#">Link 4</a>
+		<a href="#">Link 5</a>
+	</nav>
+</header> -->
+
+<div class="navbar">
+  <h2>NavBar</h2>
+  <div class="a">
+    <a [routerLink]="['']" class="frow">Emp-Details</a>
+      <a [routerLink]="['/emp-update']">Emp-Update</a>
+		<!-- <a href="#">Link 3</a>
+		<a href="#">Link 4</a> -->
+		<a [routerLink]="['/emp-details']">Back</a>
+  </div>
+
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,154 @@
+<!-- <p>emp-update works!</p>
+<br>
+<div>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Date Of Birth</label>&nbsp;&nbsp;
+    <input type="date" ngModel name="name" class="form-control">
+  </div>
+  <br>
+  <div class="form-group">
+    <label>Position</label>&nbsp;&nbsp;
+    <input type="text" ngModel name="name" class="form-control">
+  </div>
+</form>
+</div>
+<br>
+<div>
+  <button>Submit</button>
+</div> -->
+
+
+
+
+<!-- 
+<div>
+  <h1>Submit Data to Dummy API</h1> -->
+  <!-- <button (click)="submitData()">Submit</button> -->
+  <!-- <h2>Submitted Data</h2>
+  <ul>
+    *ngFor="let item of submittedData"
+    <li>
+      Name: {{ item.name }}, Salary: {{ item.salary }}, Age: {{ item.age }}
+    </li>
+  </ul>
+</div> -->
+
+<!-- <div class="container-fluid">
+  <h1>Testing Form</h1>
+  <form class="form-group">
+    <div>
+      <label>Employee Name</label>
+      <input type="text" class="form-control">
+    </div>
+  </form>
+</div> -->
+
+<!-- 
+<form (ngSubmit)="onSubmit()" style="margin-top: 200px;">
+  <label for="field1">Field 1:</label>
+  <input type="text" id="field1" [(ngModel)]="field1" name="field1" required>
+
+  <label for="field2">Field 2:</label>
+  <input type="text" id="field2" [(ngModel)]="field2" name="field2" required>
+
+  <button type="submit" (click)=" onSubmit()">Submit</button>
+</form> -->
+
+<!-- //(ngSubmit)="onSubmit()" -->
+<form class="form-all">
+  <div class="form__group">
+    <label for="name" class="form__label">Employee ID</label>
+    <input type="number" class="form__input" [(ngModel)]="empID" id="name" #name="ngModel" placeholder="Employee ID" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div class="form__group">
+    <label for="name" class="form__label">Employee Number</label>
+    <input type="number" class="form__input" id="name" [(ngModel)]="empNumber" #name="ngModel" placeholder="Employee Number" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div class="form__group">
+    <label for="name" class="form__label">First Name</label>
+    <input type="text" class="form__input" id="name" [(ngModel)]="firstName" #name="ngModel" placeholder="First Name" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+ 
+  <div class="form__group">
+    <label for="formGroupExampleInput" class="form__label">Middle Name</label>
+    <!-- {{item}} -->
+    <input type="text" class="form__input" id="formGroupExampleInput"  [(ngModel)]="middleName" #formGroupExampleInput="ngModel" placeholder="Middle Name" [ngModelOptions]="{standalone: true}"/>
+  </div>
+ 
+  <div class="form__group">
+    <label for="name" class="form__label">Last Name</label>
+    <input type="text" class="form__input" id="name" [(ngModel)]="lastName" #name="ngModel" placeholder="Last Name" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div class="form__group">
+    <label for="name" class="form__label">Official Email</label>
+    <input type="text" class="form__input" id="name" [(ngModel)]="officialEmail" #name="ngModel" placeholder="Official Email" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div class="form__group">
+    <label for="name" class="form__label">Personal Email</label>
+    <input type="text" class="form__input" [(ngModel)]="personalEmail" id="name" #name="ngModel" placeholder="Personal Email" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div class="form__group">
+    <label for="name" class="form__label">Marital Status</label>
+    <input type="text" class="form__input" [(ngModel)]="maritalStatus" id="name" #name="ngModel" placeholder="Marital Status" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div class="form__group">
+    <label for="name" class="form__label">Gender</label>
+    <input type="text" class="form__input" id="name" [(ngModel)]="genDER" #name="ngModel" placeholder="Gender" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div class="form__group">
+    <label for="name" class="form__label">Date Of Birth</label>
+    <input type="date" class="form__input"  [(ngModel)]="empDate" id="name" #name="ngModel" placeholder="Date Of Birth" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div class="form__group">
+    <label for="name" class="form__label">Company ID</label>
+    <input type="number" class="form__input" [(ngModel)]="companyId" id="name" #name="ngModel" placeholder="Company ID" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div class="form__group">
+    <label for="name" class="form__label">Department ID</label>
+    <input type="number" class="form__input" [(ngModel)]="departmentId" id="name" #name="ngModel" placeholder="Department ID" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div class="form__group">
+    <label for="name" class="form__label">Division ID</label>
+    <input type="number" class="form__input" [(ngModel)]="divisionId" id="name" #name="ngModel" placeholder="Division ID" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div class="form__group">
+    <label for="name" class="form__label">PAN Number</label>
+    <input type="text" [(ngModel)]="panNumber" class="form__input" id="name" #name="ngModel" placeholder="PAN Number" required="" [ngModelOptions]="{standalone: true}" disabled />
+  </div>
+
+  <div>
+  <!-- <img src ="https://www.freepik.com/free-vector/blue-circle-with-white-user_145857007.htm#query=unknown%20person%20icon&position=1&from_view=keyword&track=ais_hybrid&uuid=75c06c2d-2087-475d-a450-9d1a87ba53a1" height="250px" width="300px"> -->
+  <img [src]="url" alt="Unknown Person" height="235px" width="300px" />
+  <label>
+    <input #imageInput
+           type="file"
+           accept="image/*"
+           (click)="onselectFile($event)">
+  </label>
+  </div>
+  <!-- <button type="submit" (click)=" onSubmit()">Submit</button> -->
+  <button class="button-71" type="submit" (click)=" onSubmit()">Submit</button>
+
+</form>
+  <!-- <div class="form-group">
+    <label for="formGroupExampleInput2">Gender</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2"  [(ngModel)]="formGroupExampleInput2" placeholder="Last Name">
+  </div>
+</form>
+
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+
+

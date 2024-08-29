@@ -1,0 +1,12 @@
+<div *ngFor="let employee of employees">
+    <span>{{ employee.name }}</span>
+    <button (click)="editEmployee(employee)">Edit</button>
+  </div>
+  
+  <form *ngIf="isEditing" [formGroup]="editForm">
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name">
+    <button (click)="saveEmployee()">Save</button>
+    <button (click)="cancelEdit()">Cancel</button>
+  </form>
+  

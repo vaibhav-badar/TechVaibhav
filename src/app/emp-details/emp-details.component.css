@@ -1,0 +1,120 @@
+/* container */ 
+.form_title{
+  position:absolute;
+  top:12%;
+  left: 1.8%;
+}
+.s_main {
+    position: absolute;
+    top:19%;
+    left: 32.8%;
+    transform: translateX(-50%);
+  }
+  
+  input#s_one {
+    color: inherit;
+    padding: 12px 10px;
+    width: 60vw;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border : solid 1px #000000;
+    /* border: none; */
+    outline: none;
+  }
+  
+  
+  .first {
+      /*max-width: 800px;  Limit the width of the table */
+      margin: 20px auto; /* Center the table */
+      padding: 20px; /* Add padding around the container */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+      background-color: #f9f9f9; /* Light background color */
+    }
+    
+    body {
+      font-family: 'lato', sans-serif;
+    }
+  
+    /* Table styling */
+    .second {
+      /* position: fixed; */
+      margin-top: 5.8%;
+      width: 100%; /* Full width */
+      border-collapse: collapse; /* Merge borders */
+      font-size: 0.9em;
+      font-family: sans-serif;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15px);
+    }
+  
+    table thead tr {
+      background-color: #009879;
+      color: #ffffff;
+  }
+  
+  .table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+/* 
+  .editbutton{
+    
+  } */
+ svg {
+    width: 20px; 
+    height:  20px;
+    vertical-align: middle; 
+  }
+  
+  /* .table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  } */
+  
+  .table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+  }
+    
+    /* Header styling */
+    .third {
+      position: -webkit-sticky;
+      position: sticky;
+      background-color: #007bff; /* Primary color for header */
+      color: white; /* Text color */
+    }
+    
+    /* Styling for header cells */
+    .third th {
+      position: sticky;
+      padding: 12px; /* Padding inside header cells */
+      text-align: left; /* Align text to the left */
+      font-weight: bold; /* Bold font */
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;;
+    }
+  
+    /* Styling for table cells */
+    .second td {
+      padding: 10px; /* Padding inside cells */
+      border: 1px solid #ddd; /* Light border */
+    }
+    
+    /* Hover effect for table rows */
+    tbody tr:hover {
+      background-color: #ffff99; /* Light gray background on hover */
+      font-weight: bold;
+      color: #009879;
+      transform: scale(1.0);
+    }
+    
+    /* Responsive styling */
+    @media (max-width: 600px) {
+      .second {
+        font-size: 14px; /* Smaller font size on smaller screens */
+      }
+    }
